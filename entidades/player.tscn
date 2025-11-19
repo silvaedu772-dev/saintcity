@@ -153,6 +153,11 @@ animations = [{
 "name": &"andando",
 "speed": 11.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"atacando",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l7jkh")
@@ -199,7 +204,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_yrqjl")
 }],
 "loop": true,
-"name": &"morrendo",
+"name": &"dano",
 "speed": 5.0
 }, {
 "frames": [{
@@ -242,9 +247,10 @@ collision_mask = 2
 script = ExtResource("1_11m8g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 0.25)
 shape = SubResource("RectangleShape2D_kq7hh")
 
 [node name="AnimacaoPlayer" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l7jkh")
-animation = &"morrendo"
+animation = &"andando"
