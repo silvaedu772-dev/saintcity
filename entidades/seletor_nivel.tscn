@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://e37jhnb87fcu"]
+
+[ext_resource type="Script" uid="uid://b60h7o0d757mq" path="res://scripts/seletor_nivel.gd" id="1_xve66"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3yqm"]
+size = Vector2(20, 84)
+
+[node name="SeletorNivel" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_xve66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p3yqm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

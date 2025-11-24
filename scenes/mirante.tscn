@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dnt6n78c821gv"]
+[gd_scene load_steps=7 format=4 uid="uid://dnt6n78c821gv"]
 
 [ext_resource type="Texture2D" uid="uid://bvluq76f4oa8g" path="res://tiles/Tileset Pack 1 Sheet.png" id="1_cu8u5"]
 [ext_resource type="PackedScene" uid="uid://bnximd3lkpngs" path="res://entidades/camera.tscn" id="1_onx5x"]
 [ext_resource type="PackedScene" uid="uid://bgh32h2xfsbql" path="res://entidades/player.tscn" id="3_iko1d"]
+[ext_resource type="PackedScene" uid="uid://cy0w3dwr5utuk" path="res://entidades/seletor_secreto.tscn" id="4_iko1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7kiy"]
 texture = ExtResource("1_cu8u5")
@@ -22,6 +23,7 @@ texture = ExtResource("1_cu8u5")
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
@@ -118,7 +120,7 @@ texture = ExtResource("1_cu8u5")
 16:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_hcp7q"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/2 = SubResource("TileSetAtlasSource_j7kiy")
 
 [node name="Mirante" type="Node2D"]
@@ -135,3 +137,8 @@ tile_map_data = PackedByteArray("AAAAAAgAAgAAAAEAAAABAAgAAgABAAEAAAACAAgAAgABAAE
 tile_set = SubResource("TileSet_hcp7q")
 
 [node name="player" parent="." instance=ExtResource("3_iko1d")]
+position = Vector2(95, 113)
+
+[node name="SeletorSecreto" parent="." instance=ExtResource("4_iko1d")]
+position = Vector2(472, 190)
+nivel_selecionado = "mirante"
