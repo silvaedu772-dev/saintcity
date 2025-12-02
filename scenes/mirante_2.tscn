@@ -7427,7 +7427,7 @@ position = Vector2(0, -1014)
 texture = ExtResource("28_jyy2o")
 
 [node name="SeletorNivel" parent="." instance=ExtResource("26_k4uss")]
-position = Vector2(7362, -1256)
+position = Vector2(7400, -1587)
 nivel_selecionado = "mirante"
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]

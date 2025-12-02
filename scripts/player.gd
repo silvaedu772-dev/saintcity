@@ -2,10 +2,10 @@ extends CharacterBody2D
 
 @onready var animacao: AnimatedSprite2D = $AnimacaoPlayer
 
-const MAX_JUMP = 2 #Número máximo de pulos do personagem
+const MAX_JUMP = 100 #Número máximo de pulos do personagem
 var jump_count = 0 #Contador de pulos que o player deu
 
-const SPEED = 120.0
+const SPEED = 180.0
 const JUMP_VELOCITY = -400.0
 
 
@@ -42,6 +42,7 @@ func ativar_gravidade(delta):
 		velocity += get_gravity() * delta
 	
 func mover(delta):
+	atualizar_animacao()
 	if direction:
 		velocity.x = move_toward(velocity.x, direction * SPEED, 400 * delta)
 	else:
@@ -68,10 +69,12 @@ func pulando(delta):
 	
 	#Verifica se o botão de pulo esta sendo pressionado e se ele pode pular
 	if Input.is_action_just_pressed("jump") && pode_pular():
+		preparar_pulo()
 		return # Aqui ficará o estado dele pulando
 		
 		#Verifica se o player está no ar ( ou seja se ele não esta no chão)
 	if velocity.y > 0:
+		preparar_caindo()
 		return #Aqui fica o estado dele caindo
 
 func parado(delta):
@@ -79,6 +82,7 @@ func parado(delta):
 	mover(delta)
 	
 	if velocity.x !=0:
+		preparar_andando()
 		return
 	
 	if Input.is_action_just_pressed("jump"):
@@ -89,9 +93,10 @@ func caindo(delta):
 	ativar_gravidade(delta)
 	mover(delta)
 	
-	if Input.is_action_just_pressed("pular") and pode_pular():
+	if Input.is_action_just_pressed("jump") and pode_pular():
 		preparar_pulo()
 		return
+		
 	if is_on_floor():
 		jump_count=0
 		if velocity.x == 0:
@@ -108,7 +113,7 @@ func andando(delta):
 		preparar_parado()
 		return #TODO preparar parado
 	
-	if Input.is_action_just_pressed(delta):
+	if Input.is_action_just_pressed("jump"):
 		preparar_pulo()
 		return
 	
