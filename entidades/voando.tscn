@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://tbi8vip4y3tm"]
+
+[ext_resource type="PackedScene" uid="uid://u8xxm04vsbuv" path="res://entidades/periquito.tscn" id="1_o8s8l"]
+
+[sub_resource type="Curve2D" id="Curve2D_x1s2j"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -1, -1036.9941, 615.24457, 1036.9941, -615.24457, 2934, -659)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_o8s8l"]
+resource_name = "voando"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_x1s2j"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_40ti1"]
+_data = {
+&"RESET": SubResource("Animation_x1s2j"),
+&"voando": SubResource("Animation_o8s8l")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="periquito" parent="." instance=ExtResource("1_o8s8l")]
+position = Vector2(0, -1)
+
+[node name="AnimatedSprite2D" parent="periquito/CharacterBody2D" index="1"]
+frame_progress = 0.010376459
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_x1s2j")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(0, -1)
+rotates = false
+loop = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
+remote_path = NodePath("../../../periquito")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_40ti1")
+}
+autoplay = "voando"
+
+[editable path="periquito"]

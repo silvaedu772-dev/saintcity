@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://betn22onp56j4"]
+
+[ext_resource type="Script" uid="uid://doopgvy1hvcge" path="res://scripts/portal.gd" id="1_1fpxi"]
+[ext_resource type="Texture2D" uid="uid://cwm0eqna6yio5" path="res://tiles/kenney_16x16.png" id="1_sxgov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fpxi"]
+size = Vector2(14, 24)
+
+[node name="portal" type="Node2D"]
+script = ExtResource("1_1fpxi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sxgov")
+region_enabled = true
+region_rect = Rect2(240, 56, 16, 24)
+
+[node name="Area2D" type="Area2D" parent="." groups=["portais"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_1fpxi")
+debug_color = Color(0.4896453, 0.41305706, 0.105770834, 0.41960785)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

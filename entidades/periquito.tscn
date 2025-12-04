@@ -1,0 +1,158 @@
+[gd_scene load_steps=10 format=3 uid="uid://u8xxm04vsbuv"]
+
+[ext_resource type="Texture2D" uid="uid://cjc8r7644xiu3" path="res://sprites/Walk.png" id="1_jjycv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l35ev"]
+size = Vector2(12, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nbuk"]
+atlas = ExtResource("1_jjycv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf8uu"]
+atlas = ExtResource("1_jjycv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kw0w"]
+atlas = ExtResource("1_jjycv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoplp"]
+atlas = ExtResource("1_jjycv")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6s0r"]
+atlas = ExtResource("1_jjycv")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wu0i"]
+atlas = ExtResource("1_jjycv")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nx1e5"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nbuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf8uu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kw0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoplp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6s0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wu0i")
+}],
+"loop": true,
+"name": &"voando",
+"speed": 15.0
+}]
+
+[node name="periquito" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_l35ev")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-399, -554)
+scale = Vector2(0.94160086, 0.9416005)
+sprite_frames = SubResource("SpriteFrames_nx1e5")
+animation = &"voando"
+autoplay = "voando"
+frame_progress = 0.7671071
+offset = Vector2(426, 581)
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+position = Vector2(0, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_l35ev")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+position = Vector2(-399, -554)
+scale = Vector2(0.94160086, 0.9416005)
+sprite_frames = SubResource("SpriteFrames_nx1e5")
+animation = &"voando"
+autoplay = "voando"
+frame_progress = 0.7671071
+offset = Vector2(426, 581)
+
+[node name="CharacterBody2D3" type="CharacterBody2D" parent="."]
+position = Vector2(-23, 17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D3"]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_l35ev")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D3"]
+position = Vector2(-399, -554)
+scale = Vector2(0.94160086, 0.9416005)
+sprite_frames = SubResource("SpriteFrames_nx1e5")
+animation = &"voando"
+autoplay = "voando"
+frame_progress = 0.7671071
+offset = Vector2(426, 581)
+
+[node name="CharacterBody2D4" type="CharacterBody2D" parent="."]
+position = Vector2(14, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D4"]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_l35ev")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D4"]
+position = Vector2(-399, -554)
+scale = Vector2(0.94160086, 0.9416005)
+sprite_frames = SubResource("SpriteFrames_nx1e5")
+animation = &"voando"
+autoplay = "voando"
+frame_progress = 0.7671071
+offset = Vector2(426, 581)
+
+[node name="CharacterBody2D5" type="CharacterBody2D" parent="."]
+position = Vector2(19, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D5"]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_l35ev")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D5"]
+position = Vector2(-399, -554)
+scale = Vector2(0.94160086, 0.9416005)
+sprite_frames = SubResource("SpriteFrames_nx1e5")
+animation = &"voando"
+autoplay = "voando"
+frame_progress = 0.7671071
+offset = Vector2(426, 581)
+
+[node name="CharacterBody2D6" type="CharacterBody2D" parent="."]
+position = Vector2(-9, 27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D6"]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_l35ev")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D6"]
+position = Vector2(-399, -554)
+scale = Vector2(0.94160086, 0.9416005)
+sprite_frames = SubResource("SpriteFrames_nx1e5")
+animation = &"voando"
+autoplay = "voando"
+frame_progress = 0.7671071
+offset = Vector2(426, 581)

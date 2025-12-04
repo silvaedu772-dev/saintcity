@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 @onready var animacao: AnimatedSprite2D = $AnimacaoPlayer
 
-const MAX_JUMP = 100 #Número máximo de pulos do personagem
+const MAX_JUMP = 2 #Número máximo de pulos do personagem
 var jump_count = 0 #Contador de pulos que o player deu
+var jump_pad_max = -250
 
 const SPEED = 180.0
 const JUMP_VELOCITY = -400.0
@@ -138,4 +139,4 @@ func preparar_parado():
 	
 func preparar_caindo():
 	estado_atual = EstadoPlayer.caindo
-	animacao.play("parado")
+	animacao.play("pulando")
