@@ -69,8 +69,8 @@ position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(-399, -554)
-scale = Vector2(0.94160086, 0.9416005)
+position = Vector2(-203.99998, -283)
+scale = Vector2(0.4669886, 0.46698824)
 sprite_frames = SubResource("SpriteFrames_nx1e5")
 animation = &"voando"
 autoplay = "voando"
@@ -85,12 +85,13 @@ position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2"]
-position = Vector2(-399, -554)
-scale = Vector2(0.94160086, 0.9416005)
+position = Vector2(-178.78416, -250.53247)
+scale = Vector2(0.40448907, 0.4044898)
 sprite_frames = SubResource("SpriteFrames_nx1e5")
 animation = &"voando"
 autoplay = "voando"
-frame_progress = 0.7671071
+frame = 5
+frame_progress = 0.8491511
 offset = Vector2(426, 581)
 
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="."]
@@ -101,12 +102,14 @@ position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D3"]
-position = Vector2(-399, -554)
-scale = Vector2(0.94160086, 0.9416005)
+position = Vector2(-139, -215)
+rotation = -0.0010426414
+scale = Vector2(0.3419887, 0.3419886)
 sprite_frames = SubResource("SpriteFrames_nx1e5")
 animation = &"voando"
 autoplay = "voando"
-frame_progress = 0.7671071
+frame = 2
+frame_progress = 0.5069091
 offset = Vector2(426, 581)
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="."]
@@ -117,12 +120,13 @@ position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D4"]
-position = Vector2(-399, -554)
-scale = Vector2(0.94160086, 0.9416005)
+position = Vector2(-107.99999, -146)
+scale = Vector2(0.21698892, 0.21698794)
 sprite_frames = SubResource("SpriteFrames_nx1e5")
 animation = &"voando"
 autoplay = "voando"
-frame_progress = 0.7671071
+frame = 3
+frame_progress = 0.754328
 offset = Vector2(426, 581)
 
 [node name="CharacterBody2D5" type="CharacterBody2D" parent="."]
@@ -133,12 +137,13 @@ position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D5"]
-position = Vector2(-399, -554)
-scale = Vector2(0.94160086, 0.9416005)
+position = Vector2(-185, -246)
+scale = Vector2(0.40448907, 0.4044898)
 sprite_frames = SubResource("SpriteFrames_nx1e5")
 animation = &"voando"
 autoplay = "voando"
-frame_progress = 0.7671071
+frame = 1
+frame_progress = 0.82337487
 offset = Vector2(426, 581)
 
 [node name="CharacterBody2D6" type="CharacterBody2D" parent="."]
@@ -149,10 +154,11 @@ position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D6"]
-position = Vector2(-399, -554)
-scale = Vector2(0.94160086, 0.9416005)
+position = Vector2(-121, -182)
+scale = Vector2(0.27948928, 0.27948916)
 sprite_frames = SubResource("SpriteFrames_nx1e5")
 animation = &"voando"
 autoplay = "voando"
-frame_progress = 0.7671071
+frame = 4
+frame_progress = 0.7626612
 offset = Vector2(426, 581)

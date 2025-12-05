@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://k3w61ewlcojt"]
+[gd_scene load_steps=9 format=3 uid="uid://k3w61ewlcojt"]
 
 [ext_resource type="Texture2D" uid="uid://cwm0eqna6yio5" path="res://tiles/kenney_16x16.png" id="1_h0li1"]
+[ext_resource type="Script" uid="uid://ccq1hv70hav0q" path="res://scripts/jump_pad_2.gd" id="1_ltfpq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ltfpq"]
 atlas = ExtResource("1_h0li1")
@@ -17,7 +18,7 @@ region = Rect2(64, 272, 16, 17)
 [sub_resource type="SpriteFrames" id="SpriteFrames_tl1x2"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 2.01,
 "texture": SubResource("AtlasTexture_ltfpq")
 }, {
 "duration": 1.0,
@@ -26,9 +27,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gacgy")
 }],
-"loop": true,
+"loop": false,
 "name": &"ativar",
-"speed": 8.0
+"speed": 14.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mb54l"]
@@ -38,11 +39,13 @@ size = Vector2(13, 16.5)
 size = Vector2(12, 3)
 
 [node name="jumpPad_2" type="Node2D"]
+script = ExtResource("1_ltfpq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tl1x2")
 animation = &"ativar"
-frame_progress = 0.3252911
+frame = 2
+frame_progress = 1.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -55,3 +58,5 @@ shape = SubResource("RectangleShape2D_mb54l")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -7.5)
 shape = SubResource("RectangleShape2D_cbh07")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

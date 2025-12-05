@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://doopgvy1hvcge" path="res://scripts/portal.gd" id="1_1fpxi"]
 [ext_resource type="Texture2D" uid="uid://cwm0eqna6yio5" path="res://tiles/kenney_16x16.png" id="1_sxgov"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fpxi"]
-size = Vector2(14, 24)
+[sub_resource type="CircleShape2D" id="CircleShape2D_1fpxi"]
+radius = 1.0
 
-[node name="portal" type="Node2D"]
+[node name="portal" type="Node2D" groups=["portais"]]
 script = ExtResource("1_1fpxi")
+metadata/_edit_horizontal_guides_ = [-12.0, 12.0]
+metadata/_edit_vertical_guides_ = [8.0, -8.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_sxgov")
@@ -17,7 +19,7 @@ region_rect = Rect2(240, 56, 16, 24)
 [node name="Area2D" type="Area2D" parent="." groups=["portais"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_1fpxi")
+shape = SubResource("CircleShape2D_1fpxi")
 debug_color = Color(0.4896453, 0.41305706, 0.105770834, 0.41960785)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

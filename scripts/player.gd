@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 const MAX_JUMP = 2 #Número máximo de pulos do personagem
 var jump_count = 0 #Contador de pulos que o player deu
-var jump_pad_max = -250
+var jump_pad_max = -500
 
 const SPEED = 180.0
 const JUMP_VELOCITY = -400.0
