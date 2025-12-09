@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=4 uid="uid://sv05h351cimm"]
+[gd_scene load_steps=81 format=4 uid="uid://sv05h351cimm"]
 
 [ext_resource type="Texture2D" uid="uid://bvluq76f4oa8g" path="res://tiles/Tileset Pack 1 Sheet.png" id="1_ecjrn"]
 [ext_resource type="Script" uid="uid://bh7i3jd5br2mg" path="res://scripts/mirante_2.gd" id="1_hiycn"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://b4fhfmh31rgmb" path="res://entidades/jump_pad.tscn" id="33_v5q7u"]
 [ext_resource type="PackedScene" uid="uid://k3w61ewlcojt" path="res://entidades/jump_pad_2.tscn" id="34_jt7rg"]
 [ext_resource type="PackedScene" uid="uid://betn22onp56j4" path="res://entidades/portal.tscn" id="35_5jqhj"]
+[ext_resource type="PackedScene" uid="uid://dxi0leh0hhq1t" path="res://entidades/inimigo.tscn" id="36_qfjwk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4v7jv"]
 texture = ExtResource("4_454w8")
@@ -7231,7 +7232,7 @@ script = ExtResource("1_hiycn")
 
 [node name="player" parent="." instance=ExtResource("1_viib7")]
 z_index = 30
-position = Vector2(7137, -1371)
+position = Vector2(8763, -1371)
 
 [node name="plataforma" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -7463,3 +7464,6 @@ position = Vector2(7478, -1227)
 origem = "orla2"
 destino = "orla"
 distancia = 15
+
+[node name="inimigo" parent="." instance=ExtResource("36_qfjwk")]
+position = Vector2(8915, -1223)
