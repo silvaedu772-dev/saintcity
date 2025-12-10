@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://sv05h351cimm"]
+[gd_scene load_steps=86 format=4 uid="uid://sv05h351cimm"]
 
 [ext_resource type="Texture2D" uid="uid://bvluq76f4oa8g" path="res://tiles/Tileset Pack 1 Sheet.png" id="1_ecjrn"]
 [ext_resource type="Script" uid="uid://bh7i3jd5br2mg" path="res://scripts/mirante_2.gd" id="1_hiycn"]
@@ -36,6 +36,11 @@
 [ext_resource type="PackedScene" uid="uid://k3w61ewlcojt" path="res://entidades/jump_pad_2.tscn" id="34_jt7rg"]
 [ext_resource type="PackedScene" uid="uid://betn22onp56j4" path="res://entidades/portal.tscn" id="35_5jqhj"]
 [ext_resource type="PackedScene" uid="uid://dxi0leh0hhq1t" path="res://entidades/inimigo.tscn" id="36_qfjwk"]
+[ext_resource type="PackedScene" uid="uid://c0fwjwes5gvcd" path="res://entidades/passarinho.tscn" id="37_7lm4h"]
+[ext_resource type="PackedScene" uid="uid://cvq3tg6li67ki" path="res://entidades/passarinho_2.tscn" id="38_5wt6b"]
+[ext_resource type="PackedScene" uid="uid://1rnn340g17f" path="res://entidades/passarinho_3.tscn" id="39_ebrmk"]
+[ext_resource type="PackedScene" uid="uid://b5eva1gtxttvv" path="res://entidades/passarinho_4.tscn" id="40_3qsfi"]
+[ext_resource type="PackedScene" uid="uid://ch7j56fd6w0ro" path="res://entidades/cat.tscn" id="41_3qsfi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4v7jv"]
 texture = ExtResource("4_454w8")
@@ -7467,3 +7472,50 @@ distancia = 15
 
 [node name="inimigo" parent="." instance=ExtResource("36_qfjwk")]
 position = Vector2(8915, -1223)
+
+[node name="passarinho" parent="." instance=ExtResource("37_7lm4h")]
+z_index = -1
+position = Vector2(8441, -1394)
+
+[node name="passarinho2" parent="." instance=ExtResource("37_7lm4h")]
+z_index = -1
+position = Vector2(8467, -1349)
+
+[node name="passarinho3" parent="." instance=ExtResource("38_5wt6b")]
+z_index = -1
+position = Vector2(8408, -1385)
+
+[node name="passarinho4" parent="." instance=ExtResource("38_5wt6b")]
+z_index = -1
+position = Vector2(8394, -1363)
+
+[node name="passarinho5" parent="." instance=ExtResource("39_ebrmk")]
+z_index = -1
+position = Vector2(8218, -1390)
+
+[node name="passarinho6" parent="." instance=ExtResource("39_ebrmk")]
+z_index = -1
+position = Vector2(8305, -1374)
+
+[node name="passarinho7" parent="." instance=ExtResource("39_ebrmk")]
+z_index = -1
+position = Vector2(8281, -1392)
+
+[node name="passarinho8" parent="." instance=ExtResource("40_3qsfi")]
+z_index = -1
+position = Vector2(8244, -1388)
+
+[node name="passarinho9" parent="." instance=ExtResource("40_3qsfi")]
+z_index = -1
+position = Vector2(8182, -1365)
+
+[node name="passarinho10" parent="." instance=ExtResource("39_ebrmk")]
+z_index = -1
+position = Vector2(8187, -1344)
+
+[node name="passarinho11" parent="." instance=ExtResource("40_3qsfi")]
+z_index = -1
+position = Vector2(8299, -1344)
+
+[node name="cat" parent="." instance=ExtResource("41_3qsfi")]
+position = Vector2(8326, -1275)

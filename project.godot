@@ -29,6 +29,8 @@ window/stretch/mode="canvas_items"
 
 player=""
 portais=""
+tiro=""
+inimigos=""
 
 [input]
 
@@ -71,6 +73,7 @@ entrar={
 2d_physics/layer_4="LevelEnd"
 2d_physics/layer_5="PlataformasMoveis"
 2d_physics/layer_6="Inimigos"
+2d_physics/layer_7="Perigo"
 
 [rendering]
 

@@ -140,3 +140,18 @@ func preparar_parado():
 func preparar_caindo():
 	estado_atual = EstadoPlayer.caindo
 	animacao.play("pulando")
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if area.is_in_group("inimigos"):
+		print("Player Atingido")
+	elif area.is_in_group("tiro"):
+		print("Player Levou tiro")
+
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("inimigos"):
+		print("Player Atingido")
+	elif body.is_in_group("tiro"):
+		print("Player Levou tiro")
+	

@@ -65,6 +65,7 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
 position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
@@ -81,6 +82,7 @@ offset = Vector2(426, 581)
 position = Vector2(0, 13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+visible = false
 position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
@@ -98,6 +100,7 @@ offset = Vector2(426, 581)
 position = Vector2(-23, 17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D3"]
+visible = false
 position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
@@ -116,6 +119,7 @@ offset = Vector2(426, 581)
 position = Vector2(14, 24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D4"]
+visible = false
 position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
@@ -133,6 +137,7 @@ offset = Vector2(426, 581)
 position = Vector2(19, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D5"]
+visible = false
 position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 
@@ -150,6 +155,7 @@ offset = Vector2(426, 581)
 position = Vector2(-9, 27)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D6"]
+visible = false
 position = Vector2(-2, 0.5)
 shape = SubResource("RectangleShape2D_l35ev")
 

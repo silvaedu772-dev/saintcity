@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bgh32h2xfsbql"]
+[gd_scene load_steps=24 format=3 uid="uid://bgh32h2xfsbql"]
 
 [ext_resource type="Script" uid="uid://dlo6rxd5xcrka" path="res://scripts/player.gd" id="1_11m8g"]
 [ext_resource type="Texture2D" uid="uid://ugde3xsl1kqe" path="res://sprites/character_blue.png" id="1_le3lr"]
@@ -141,15 +141,26 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qu0p"]
+
 [node name="player" type="CharacterBody2D" groups=["player"]]
 collision_mask = 50
 script = ExtResource("1_11m8g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 0.25)
 shape = SubResource("RectangleShape2D_kq7hh")
 
 [node name="AnimacaoPlayer" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l7jkh")
 animation = &"correndo"
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_2qu0p")
+debug_color = Color(0.7411765, 0.15294118, 0.019607844, 0.41960785)
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
